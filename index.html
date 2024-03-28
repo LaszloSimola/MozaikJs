@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +15,11 @@
     <button id="createCollectionBtn" class="btn btn-primary">Új gyűjtemény létrehozása</button>
     <div id="collectionForm" style="display: none;">
         <div class="mb-3">
-            <label for="nameInput" class="form-label">Név:</label>
+            <label for="nameInput" class="form-label">Cím:</label>
             <input type="text" class="form-control" id="nameInput">
         </div>
         <div class="mb-3">
-            <label for="descriptionInput" class="form-label">Leírás:</label>
+            <label for="descriptionInput" class="form-label">Témakör:</label>
             <input type="text" class="form-control" id="descriptionInput">
         </div>
         <div class="mb-3">
@@ -28,6 +28,10 @@
         </div>
         <button id="createBtn" class="btn btn-success">Létrehozás</button>
     </div>
+</div>
+<div id="gyujtemenyek" class="container mt-3">
+    <h2 >Hozzáadott gyűjtemények:</h2>
+    <ul id="addedCollections" class="list-group"></ul>
 </div>
 </body>
 </html>
