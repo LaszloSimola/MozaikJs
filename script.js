@@ -26,12 +26,12 @@
             deleteButton.css("margin-left", "10px");
             saveItems();
         });
-
+        //deleteButton button event handler
         $(document).on("click", ".deleteButton", function() {
             $(this).closest('li').remove();
             saveItems();
         });
-
+        //rename button event handler
         $(document).on("click", ".renameButton", function() {
             var titleElement = $(this).siblings('.title');
             var newTitle = prompt("Adj meg egy új címet:");
@@ -40,7 +40,7 @@
                 saveItems();
             }
         });
-
+        //add new item button event handler
         $(document).on("click", ".addNewItemButton", function() {
             var collectionItem = $(this).closest('li');
             var newName = prompt("Új elem neve:");
@@ -58,7 +58,7 @@
                 collectionItem.append(buttn);
                 saveItems();
 
-                // Attach event handler for the "do it" button inside the same scope
+                // event handlers for the dropdown list
                 buttn.click(function() {
                     var selectedAction = select.val();
                     var currentIndex = collectionItem.index();
@@ -101,14 +101,14 @@
                 });
             }
         });
-
+        //loading items method
         function loadItems() {
             var savedItems = localStorage.getItem("savedItems");
             if (savedItems) {
                 $("#addedCollections").html(savedItems);
             }
         }
-
+        //saving items method
         function saveItems() {
             var itemsHtml = $("#addedCollections").html();
             localStorage.setItem("savedItems", itemsHtml);
