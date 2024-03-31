@@ -52,7 +52,7 @@
                 }
                 var dropdownDiv = $("<div>").addClass("dropdown").append(select);
                 var newItem = $("<li>").addClass("list-group-item").text(newName);
-                var buttn = $('<button>').text("    Megerősítés").addClass("btn btn-info");
+                var buttn = $('<button>').text("Megerősítés").addClass("btn btn-info");
                 newItem.append(dropdownDiv);
                 collectionItem.append(newItem);
                 collectionItem.append(buttn);
@@ -63,7 +63,7 @@
                     var selectedAction = select.val();
                     var currentIndex = collectionItem.index();
                     if (selectedAction === "Áthelyezés") {
-                        var newPosition = prompt("Enter the new position:");
+                        var newPosition = prompt("Írj be egy új pozíciót:");
                         if (newPosition !== null && newPosition !== "") {
                             var newIndex = parseInt(newPosition) - 1;
                             var items = $("#addedCollections").children();
@@ -77,10 +77,10 @@
                                     }
                                     saveItems();
                                 } else {
-                                    alert("The item is already in that position.");
+                                    alert("Az elem már ebben a pozícióban van!");
                                 }
                             } else {
-                                alert("Invalid position.");
+                                alert("Adj meg helyes pozíciót!");
                             }
                         }
                     } else if (selectedAction === "Átnevezés") {
